@@ -1,0 +1,22 @@
+.todo-title {
+  display: flex;
+  justify-content: center;
+
+  font-size: 60px;
+  letter-spacing: 12px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  text-transform: uppercase;
+}
+
+.todos-block {
+  width: 100%;
+}
+
+.todo-list {
+  box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.6);
+}
+
+.todo-number {
+  margin-right: 14px;
+}
