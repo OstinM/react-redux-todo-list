@@ -3,8 +3,8 @@
 }
 
 body {
-  margin: 0;
-  height: 100vh;
+  margin: 20px;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,6 +16,7 @@ body {
     #c850c0 46%,
     #ffcc70 100%
   );
+
 }
 
 ul {
