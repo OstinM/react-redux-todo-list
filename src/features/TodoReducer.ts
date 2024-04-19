@@ -1,10 +1,10 @@
 import { TodoType } from "../types/TodoType";
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: TodoType[] = [];
 
 const todoSlice = createSlice({
-  name: 'todos',
+  name: "todos",
   initialState,
   reducers: {
     setTodos: (state, action: PayloadAction<TodoType[]>) => {
@@ -14,14 +14,10 @@ const todoSlice = createSlice({
       state.push(action.payload);
     },
     removeTodo: (state, action: PayloadAction<number>) => {
-      return state.filter(todo => todo.id !== action.payload);
-    }
-  }
-})
+      return state.filter((todo) => todo.id !== action.payload);
+    },
+  },
+});
 
-export const { 
-  addTodo, 
-  removeTodo, 
-  setTodos, 
-} = todoSlice.actions;
+export const { addTodo, removeTodo, setTodos } = todoSlice.actions;
 export default todoSlice.reducer;
