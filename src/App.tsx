@@ -1,12 +1,10 @@
-import './App.css'
+import "./App.css";
 import { TodoList } from "./components/TodoList/TodoList";
 
-function App() {
+export const App = () => {
   return (
     <div className="page-container">
       <TodoList />
     </div>
   );
-}
-
-export default App;
+};

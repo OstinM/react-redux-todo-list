@@ -1,4 +1,4 @@
- My React Redux Todo App
+My React Redux Todo App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -10,7 +10,7 @@ This is a simple Todo list application built with React and Redux Toolkit. It al
 
 To install the dependencies, run:
 
-```bash
+````bash
 ### npm install
 
 
@@ -18,3 +18,4 @@ To start the development server, run:
 
 ```bash
 ### npm start
+````

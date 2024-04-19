@@ -14,7 +14,7 @@ export const USER_ID = 1;
 
 export const TodoList = () => {
   const todos = useAppSelector((state) => state.todos);
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   console.log(todos);
 
   const handleDragEnd = (result: DropResult) => {
