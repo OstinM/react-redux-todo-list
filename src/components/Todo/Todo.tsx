@@ -21,9 +21,10 @@ export const Todo: React.FC<Props> = ({ todo }) => {
   };
 
   return (
-    <li 
-      key={todo.id} 
-      className={isRemoved  ? 'todo-element todo-element--removed' : 'todo-element'}
+    <div
+      className={
+        isRemoved ? "todo-element todo-element--removed" : "todo-element"
+      }
     >
       <div className="checkbox-wrapper-23">
         <input
@@ -31,7 +32,7 @@ export const Todo: React.FC<Props> = ({ todo }) => {
           type="checkbox"
           id={`check-${todo.id}`}
           value={todo.id}
-          onChange={handleRemoveTodo}
+          onClick={handleRemoveTodo}
         />
         <label htmlFor={`check-${todo.id}`}>
           <svg viewBox="0,0,50,50">
@@ -40,6 +41,6 @@ export const Todo: React.FC<Props> = ({ todo }) => {
         </label>
       </div>
       {todo.title}
-    </li>
+    </div>
   );
 };
