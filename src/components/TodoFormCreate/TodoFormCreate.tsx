@@ -11,7 +11,7 @@ export const TodoFormCreate: React.FC = () => {
 
   const dispatch = useAppDispatch();
 
-  const  handleAddTodo = async (e: React.FormEvent<HTMLFormElement>) => {
+  const  handleAddTodo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newTodo: TodoType = {
@@ -21,20 +21,33 @@ export const TodoFormCreate: React.FC = () => {
       userId: USER_ID,
     }
 
-    await dispatch(addTodo(newTodo));
+    if (newTodoTitle.length > 0) {
+      dispatch(addTodo(newTodo));
+    }
 
     setNewTodoTitle('');
   }
 
+  const handleClearInput = () => {
+    setNewTodoTitle('');
+  }
+
   return (
-    <form onSubmit={handleAddTodo}>
+    <form onSubmit={handleAddTodo} className='create-form'>
       <input 
-        className="create-form" 
+        className="create-input" 
         type="text"
         placeholder='Enter Title'
         value={newTodoTitle}
         onChange={(e) => setNewTodoTitle(e.target.value)}
       />
+     {newTodoTitle && (
+       <span 
+        className='clear-button' 
+        onClick={handleClearInput}
+      >
+       </span>
+     )}
     </form>
   );
 }
